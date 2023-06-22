@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie creator</title>
+    <style>
+
+    </style>
+
+    <script>
+        'use strict';
+
+        class movieCreator {
+            constructor(title = 'unknown') {
+                this.name = title;
+            }
+        }
+
+        let dune = new movieCreator("Dune");
+        console.log(dune);
+        console.log(dune.title);
+    </script>
+</head>
+
+<body>
+    <main>
+        <h1>
+            Movies
+        </h1>
+    </main>
+</body>
+
+
+<!-- Aufgabe
+1.0 Filmsammlung
+
+Erstelle eine Klasse, die Objekte für Kinofilme anlegt.
+Jedes Objekt soll die folgenden Informationen enthalten:
+- Filmtitel: title
+- Regisseur: director
+- Laufzeit in Minuten: durationMinutes
+- Erscheinungsjahr: year
+
+Verwende diesen Konstruktor, um 4 Filme Deiner Wahl als Objekt anzulegen.
+
+    -->
+
+</html>
