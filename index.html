@@ -15,11 +15,12 @@
 
         // Create a movie class
         class movie {
-            constructor(title = 'unknown', director = 'unknown', durationMinutes = 0, year = 0) {
+            constructor(title = 'unknown', director = 'unknown', durationMinutes = 0, year = 0, cast = []) {
                 this.title = title;
                 this.director = director;
                 this.durationMinutes = durationMinutes;
                 this.year = year;
+                this.cast = cast;
             }
 
             get age() {
@@ -27,10 +28,17 @@
             }
         }
 
-        let dune = new movie("Dune", "David Lynch", 137, 1984);
-        let avatar = new movie("Avatar", "James Cameron", 162, 2009);
-        let witcher = new movie("The Witcher", "Alik Sakharov", 61, 2019);
-        let goneWithTheWind = new movie("Vom Winde verweht", "Victor Fleming", 238, 1939);
+        const duneCast =  [["Kyle", "MacLachlan"], ["Francesca", "Annis"], ["Sting"]];
+        let dune = new movie("Dune", "David Lynch", 137, 1984, duneCast);
+        
+        const avatarCast = [["Sam", "Worthington"], ["Zoe", "Saldana"], ["Sigourney", "Weaver"]];
+        let avatar = new movie("Avatar", "James Cameron", 162, 2009, avatarCast);
+
+        const witcherCast = [["Henry", "Cavill"], ["Freya", "Allan"], ["Anya", "Chalotra"]];
+        let witcher = new movie("The Witcher", "Alik Sakharov", 61, 2019, witcherCast);
+
+        const goneWithTheWindCast = [["Clark", "Gable"], ["Vivien", "Leigh"], ["Thomas", "Mitchell"]];
+        let goneWithTheWind = new movie("Vom Winde verweht", "Victor Fleming", 238, 1939, goneWithTheWindCast);
 
         let movies = {
             dune,
@@ -38,10 +46,12 @@
             witcher,
             goneWithTheWind
         }
-
-        console.log(dune);
-        console.log(`Dune title: ${dune.title}`);
-        console.log(`Avatar age: ${avatar.age}`);
+        
+        console.log(movies.dune);
+        console.log(`Dune title: ${movies.dune.title}`);
+        console.log(`Avatar age: ${movies.avatar.age}`);
+        console.log(`Witcher cast: ${movies.witcher.cast}`);
+        console.log(movies );
     </script>
 </head>
 
@@ -55,6 +65,9 @@
 
 
 <!-- Aufgabe
+1.2
+Erweitere die Klasse für Kinofilme um ein Attribut, das den Cast enthält.
+
 1.1
 Erweitere die Klasse durch eine Methode, die das aktuelle Alter 
 des Filmes per return liefert
