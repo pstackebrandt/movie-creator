@@ -13,19 +13,24 @@
     <script>
         'use strict';
 
-        class movieCreator {
+        // Create a movie class
+        class movie {
             constructor(title = 'unknown', director = 'unknown', durationMinutes = 0, year = 0) {
                 this.title = title;
                 this.director = director;
                 this.durationMinutes = durationMinutes;
                 this.year = year;
             }
+
+            get age() {
+                return new Date().getFullYear() - this.year;
+            }
         }
 
-        let dune = new movieCreator("Dune", "David Lynch", 137, 1984);
-        let avatar = new movieCreator("Avatar", "James Cameron", 162, 2009);
-        let witcher = new movieCreator("The Witcher", "Alik Sakharov", 61, 2019);
-        let goneWithTheWind = new movieCreator("Vom Winde verweht", "Victor Fleming", 238, 1939);
+        let dune = new movie("Dune", "David Lynch", 137, 1984);
+        let avatar = new movie("Avatar", "James Cameron", 162, 2009);
+        let witcher = new movie("The Witcher", "Alik Sakharov", 61, 2019);
+        let goneWithTheWind = new movie("Vom Winde verweht", "Victor Fleming", 238, 1939);
 
         let movies = {
             dune,
@@ -36,6 +41,7 @@
 
         console.log(dune);
         console.log(`Dune title: ${dune.title}`);
+        console.log(`Avatar age: ${avatar.age}`);
     </script>
 </head>
 
@@ -49,6 +55,10 @@
 
 
 <!-- Aufgabe
+1.1
+Erweitere die Klasse durch eine Methode, die das aktuelle Alter 
+des Filmes per return liefert
+
 1.0 Filmsammlung
 
 Erstelle eine Klasse, die Objekte für Kinofilme anlegt.
