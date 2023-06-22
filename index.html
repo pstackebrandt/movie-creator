@@ -14,14 +14,21 @@
         'use strict';
 
         class movieCreator {
-            constructor(title = 'unknown') {
-                this.name = title;
+            constructor(title = 'unknown', director = 'unknown', durationMinutes = 0, year = 0) {
+                this.title = title;
+                this.director = director;
+                this.durationMinutes = durationMinutes;
+                this.year = year;
             }
         }
 
-        let dune = new movieCreator("Dune");
+        let dune = new movieCreator("Dune", "David Lynch", 137, 1984);
+        let avatar = new movieCreator("Avatar", "James Cameron", 162, 2009);
+        let witcher = new movieCreator("The Witcher", "Alik Sakharov", 61, 2019);
+        let goneWithTheWind = new movieCreator("Vom Winde verweht", "Victor Fleming", 238, 1939);
+        
         console.log(dune);
-        console.log(dune.title);
+        console.log(`Dune title: ${dune.title}`);
     </script>
 </head>
 
@@ -46,6 +53,25 @@ Jedes Objekt soll die folgenden Informationen enthalten:
 
 Verwende diesen Konstruktor, um 4 Filme Deiner Wahl als Objekt anzulegen.
 
+Einige Daten:
+Filmtitel: Avatar
+Regisseur: James Cameron
+Laufzeit in Minuten: 162 Minuten
+Erscheinungsjahr: 2009
+
+"The Witcher", Staffel 1, Folge 1:
+Serientitel: The Witcher
+Staffel: 1
+Folge: 1
+Regisseur: Alik Sakharov
+Laufzeit: Etwa 61 Minuten
+Erscheinungsjahr: 2019
+
+"Vom Winde verweht":
+Filmtitel: Vom Winde verweht (Originaltitel: Gone with the Wind)
+Regisseur: Victor Fleming
+Laufzeit in Minuten: 238 Minuten
+Erscheinungsjahr: 1939
     -->
 
 </html>
